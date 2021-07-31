@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="css/anime.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/anime.css"> 
     <title>Personal Portfolio Website</title>
 </head>
 <body>
@@ -24,9 +24,9 @@
             <div class="logo"><a href="#">Kaizen<span>wb.</span></a></div>
             <ul class="menu">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#contact">Contacts</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -38,7 +38,7 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
+                <div class="text-1"><span class="wave">Hello</span>, my name is</div>
                 <div class="text-2">Tom Yotwongjai</div>
                 <div class="text-3">I am a <span>Front-End Web Developer</span></div>
                 <a href="#">Hire Me</a>
@@ -46,7 +46,7 @@
         </div>
     </section>
 
-    <!-- About section -->
+    <!-- about section -->
     <section class="about" id="about">
         <div class="max-width">
             <h2 class="title">About me</h2>
@@ -63,7 +63,37 @@
         </div>
     </section>
 
+    <!-- service section -->
+    <section class="project" id="project">
+        <div class="max-width"> 
+            <h2 class="title">My projects</h2>
+            <div class="project-content">
+                <div class="card">
+                    <div class="box">
+                        <div class="text">Project1</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nostrum.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <div class="text">Project1</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nostrum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="text">Project1</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nostrum.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div> 
+    </section>
+
+
     
-        <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

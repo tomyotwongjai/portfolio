@@ -24,7 +24,7 @@
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: crimson;
+    background: #3399ff;
 }
 .navbar .max-width{
     display: flex;
@@ -83,11 +83,12 @@
 }
 .home .home-content .text-1{
     font-size: 27px;
+    text-align: center;
 }
 .home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
-    margin-left: -3px
+    margin-left: -3px;
 }
 .home .home-content .text-3{
     font-size: 40px;
@@ -138,14 +139,11 @@
     transition: all 0.4s ease 0s;
 }
 
-/*about styling */
+/*section styling */
 section{
     padding: 100px 0;
 }
-.about{
-    font-family: 'Poppins', sans-serif;
-}
-.about .title{
+section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -154,7 +152,7 @@ section{
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
- .about .title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -164,8 +162,7 @@ section{
     background: #111;
     transform: translateX(-50%);
 } 
-.about .title::after{
-    content: "who i am";
+section .title::after{
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -175,7 +172,17 @@ section{
     background: #fff;
     transform: translateX(-50%)
 }
-.about .about-content{
+
+/* about styling */
+
+.about, .project{
+    font-family: 'Poppins', sans-serif;
+}
+.about .title::after{
+    content: "who i am";
+}
+.about .about-content,
+.project .project-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -199,6 +206,43 @@ section{
     margin-bottom: 10px;
 }
 .about .about-content .right .text span{
+    color: crimson;
+}
+
+/* porject section style */
+.project{
+    color: #fff;
+    background: #111;
+}
+.project .title::before{
+    background: #fff;
+}
+.project .title::after{
+    background: #111;
+    content: "what I did";
+}
+.project .project-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* .project .project-content .card:hover{
+    background: transparent;
+} */
+.project .project-content .card .box{
+    transition: all 0.3s ease;
+}
+.project .project-content .card:hover .box{
+    transform: scale(1.05);
+}
+.project .project-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
     color: crimson;
 }
 
@@ -277,6 +321,10 @@ section{
     .about .about-content .right{
         flex: 100%;
      }
+     .project .project-content .card{
+         width: calc(50% - 10px);
+         margin-bottom: 20px;
+     }
 }
 
 @media (max-width: 690px) {
@@ -291,6 +339,9 @@ section{
     }
     .home .home-content a{
         font-size: 20px;
+    }
+    .project .project-content .card{
+        width: 100%;
     }
 }
 

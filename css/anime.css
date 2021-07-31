@@ -1,48 +1,68 @@
-body{
+/* body{
     background: #3399ff;
+  } */
+  .wave {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
   }
   
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
   
-  .circle{
+   /* .circle{
     position: absolute;
     border-radius: 50%;
-    background: white;
+    background: white; 
     animation: ripple 15s infinite;
-    box-shadow: 0px 0px 1px 0px #508fb9;
+    box-shadow: 0px 0px 1px 0px #508fb9; 
   }
-  
+
   .small{
     width: 200px;
     height: 200px;
-    left: -100px;
+    right: -100px;
     bottom: -100px;
+  
   }
   
   .medium{
     width: 400px;
     height: 400px;
-    left: -200px;
+    right: -200px;
     bottom: -200px;
   }
   
   .large{
     width: 600px;
     height: 600px;
-    left: -300px;
+    right: -300px;
     bottom: -300px;
   }
   
   .xlarge{
     width: 800px;
     height: 800px;
-    left: -400px;
+    right: -400px;
     bottom: -400px;
   }
   
   .xxlarge{
     width: 1000px;
     height: 1000px;
-    left: -500px;
+    right: -500px;
     bottom: -500px;
   }
   
@@ -78,4 +98,4 @@ body{
       transform: scale(0.8);
     }
   }
-  
+    */
