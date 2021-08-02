@@ -24,7 +24,7 @@
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: #3399ff;
+    background: #111;
 }
 .navbar .max-width{
     display: flex;
@@ -139,10 +139,20 @@
     transition: all 0.4s ease 0s;
 }
 
-/*section styling */
+/*all content styling */
 section{
     padding: 100px 0;
 }
+.about, .project, .contact{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+ .project .project-content{
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content:space-between;
+ }
 section .title{
     position: relative;
     text-align: center;
@@ -157,7 +167,7 @@ section .title::before{
     position: absolute;
     bottom: 0px;
     left: 50%;
-    width: 180px;
+    width: 250px;
     height: 3px;
     background: #111;
     transform: translateX(-50%);
@@ -175,18 +185,8 @@ section .title::after{
 
 /* about styling */
 
-.about, .project{
-    font-family: 'Poppins', sans-serif;
-}
 .about .title::after{
     content: "who i am";
-}
-.about .about-content,
-.project .project-content{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 .about .about-content .left{
     width: 60%;
@@ -221,18 +221,32 @@ section .title::after{
     background: #111;
     content: "what I did";
 }
-.project .project-content .card{
-    width: calc(33% - 20px);
+.project-image {
+    height: 100%; 
+    width: 100%;
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+.project .project-content .card {
+    width: calc(33% - 40px); 
     background: #222;
+    border-radius: 5px;
     text-align: center;
-    border-radius: 6px;
-    padding: 20px 25px;
-    cursor: pointer;
+    padding: 15px 15px; 
+    margin-top: 2rem;
     transition: all 0.3s ease;
 }
-/* .project .project-content .card:hover{
-    background: transparent;
-} */
+.code{
+    color: #222;
+    transition: color 0.3s ease-out;
+}
+
+p:hover .code{
+    color: #fff;
+}
+ .project .project-content .card:hover{
+    background: #222;
+} 
 .project .project-content .card .box{
     transition: all 0.3s ease;
 }
@@ -245,6 +259,67 @@ section .title::after{
     margin: 10px 0 7px 0;
     color: crimson;
 }
+
+/* social icon styling */
+
+.wrapper .button{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+    background: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+    margin-top: 1rem;
+}
+
+.wrapper .button .icon{
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+    transition: all 0.3s ease-out;
+    color: #fff;
+    
+}
+
+.wrapper .button:nth-child(1):hover .icon{
+    background: #BB001B
+}
+.wrapper .button:nth-child(2):hover .icon{
+    background: #00acee;
+}
+.wrapper .button:nth-child(3):hover .icon{
+    background: #4078c0;
+}
+.wrapper .button:nth-child(4):hover .icon{
+    background: #0077b5;
+}
+.wrapper .button:nth-child(5):hover .icon{
+    background: #25d366;
+}
+.wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+}
+
+/* contact section styling */
+.contact .title::after{
+    content: "let's work together";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px); 
+}
+
 
 /* responsive media query start */
 
