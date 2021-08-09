@@ -5,28 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/anime.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/anime.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <title>Personal Portfolio Website</title>
 </head>
 <body>
-    <div class="ripple-background">
-        <div class="circle xxlarge shade1"></div>
-        <div class="circle xlarge shade2"></div>
-        <div class="circle large shade3"></div>
-        <div class="circle medium shade4"></div>
-        <div class="circle small shade5"></div>
-      </div>
-
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">Kaizen<span>wb.</span></a></div>
             <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#contact">Contacts</a></li>
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#project" class="menu-btn">Projects</a></li>
+                <li><a href="#contact" class="menu-btn">Contacts</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -38,10 +38,10 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text-1"><span class="wave">Hello</span>, my name is</div>
-                <div class="text-2">Tom Yotwongjai</div>
-                <div class="text-3">I am a <span>Front-End Web Developer</span></div>
-                <a href="#">Hire Me</a>
+                    <div class="text-1"><span class="wave">Hello</span>, my name is</div>
+                    <div class="text-2">Tom Yotwongjai</div>
+                    <div class="text-3">Have a <span class="typing"></span> <div id="currentday"></div></div>
+                    <a href="#">Hire Me</a>
             </div>
         </div>
     </section>
@@ -64,118 +64,110 @@
     </section>
 
     <!-- project section -->
-    <section class="project" id="project">
-        <div class="max-width"> 
-            <h2 class="title">My projects</h2>
-            <div class="project-content">
-                <div class="card">
-                    <div class="box">
-                        <!-- <div class="text">Project1</div> -->
-                        <img class="project-image" src="images/project.jpg" alt="">
+     <section class="project" id="project">
+        <h2 class="title">My projects</h2>
+        <div class="max-width project-container swiper-continer"> 
+            <div class="project-content swiper-wrapper">
+                <div class="card swiper-slide">
+                    <img class="project-image" src="images/project.jpg" alt="">
                         <p class="text">
                             <span class="code"><</span>
                             <a href="#" target="_blank" class="text">Porject1</a>
                             <span class="code">/></span>
                         </p>
-                    </div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <!-- <div class="text">Project1</div> -->
-                        <img class="project-image" src="images/project2.jpg" alt="">
+                <div class="card swiper-slide">
+                    <img class="project-image" src="images/project2.jpg" alt="">
                         <p class="text">
                             <span class="code"><</span>
                             <a href="#" target="_blank" class="text">Porject1</a>
                             <span class="code">/></span>
                         </p>
-                    </div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <!-- <div class="text">Project1</div> -->
-                        <img class="project-image" src="images/project.jpg" alt="">
+                <div class="card swiper-slide">
+                    <img class="project-image" src="images/project.jpg" alt="">
                         <p class="text">
                             <span class="code"><</span>
                             <a href="#" target="_blank" class="text">Porject1</a>
                             <span class="code">/></span>
                         </p>
-                    </div>
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <!-- <div class="text">Project1</div> -->
-                        <img class="project-image" src="images/project2.jpg" alt="">
+                <div class="card swiper-slide">
+                    <img class="project-image" src="images/project2.jpg" alt="">
                         <p class="text">
                             <span class="code"><</span>
                             <a href="#" target="_blank" class="text">Porject1</a>
                             <span class="code">/></span>
                         </p>
-                    </div>
                 </div>
             </div>
         </div> 
-    </section>
+    </section>   
+    <!-- <section class="project section" id="project">
+        <h2 class="section-title">Project</h2>
+        <div class="max-width">
+        <div class="project-container swiper-container">
+          <div class="swiper-wrapper">
+    
+            <div class=" project-card swiper-slide">
+                <img class="project-image" src="images/project2.jpg" alt="">
+              <div class="project-data">
+                  <h2 class="project-title">Bali</h2>
+                  <span class="project-description">24 tours available</span>
+              </div>
+            </div>
+    
+            <div class="project-card swiper-slide">
+                <img class="project-image" src="images/project.jpg" alt="">
+              <div class="project-data">
+                <h2 class="project-title">project2</h2>
+                <span class="project-description">Lorem ipsum dolor sit amet.</span>
+              </div>
+            </div>
+    
+            <div class="project-card swiper-slide">
+              <img src="images/discover3.jpg" alt="" class="project-image">
+              <div class="project-data">
+                <h2 class="project-title">project3</h2>
+                <span class="project-description">Lorem ipsum dolor sit amet.</span>
+              </div>
+            </div>
+    
+            <div class="project-card swiper-slide">
+              <img src="images/discover4.jpg" alt="" class="project-image">
+              <div class="project-data">
+                <h2 class="project-title">project4</h2>
+                <span class="project-description">Lorem ipsum dolor sit amet.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section> -->
 
     <!-- contact section -->
 
     <section class="contact" id="contact">
         <div class="max-width"> 
             <h2 class="title">Contact me</h2>
-            <!-- <div class="contact-content"> 
-                <div class="column left">  -->
-                    <div id="social">
-                        <div class="wrapper">
-                            <div class="button">
-                                <div class="icon">
-                                        <i class="fas fa-envelope"></i>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <div class="icon">
-                                        <i class="fab fa-twitter"></i>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <div class="icon">
-                                        <i class="fab fa-github"></i>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <div class="icon">
-                                        <i class="fab fa-linkedin-in"></i>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <div class="icon">
-                                        <i class="fab fa-whatsapp"></i>
-                                </div>
-                            </div>
-                        <!-- </div>
-                    </div>
-                </div>  -->
-                <!-- <div class="column right">
-                    <div class="text">Leave a message</div>
-                    <form action="#">
-                        <div class="field">
-                            <div class="field name">
-                                <input type="text" placeholder="name">
-                            </div>
-                            <div class="field email">
-                                <input type="email" placeholder="email">
-                            </div>
-                            <div class="field">
-                                <input type="text" placeholder="Subjects">
-                            </div>
-                            <div class="field textarea">
-                                <textarea cols="30" rows="10" placeholder="Leave a comment"></textarea>>
-                            </div>
-                        </div>
-                    </form>
-                </div> -->
-            </div> 
+            <div class="wrapper">
+                <ul class="button">
+                    <li class="icon"><a id="social" target="_blank" href="mailto:munch2018@gmail.com"><i class="fas fa-envelope" area-hidden="true"></i></a></li>
+                    <li class="icon"><a id="social" target="_blank" href="https://twitter.com/kaizenwb"><i class="fab fa-twitter" area-hidden="true"></i></a></li>
+                    <li class="icon"><a id="social" target="_blank" href="https://github.com/tomyotwongjai"><i class="fab fa-github" area-hidden="true"></i></a></li>
+                    <li class="icon"><a id="social" target="_blank" href="#"><i class="fab fa-linkedin-in" area-hidden="true"></i></a></li>
+                    <li class="icon"><a id="social" target="_blank" href="#"><i class="fab fa-whatsapp" area-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
         </div>
     </section>
-    
-<script src="main.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <span><a href="#"> Kaizenwb</a> | <span class="far fa-copyright"></span>2020 All rights reserved.</span>
+    </footer>
+    <script src="js/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

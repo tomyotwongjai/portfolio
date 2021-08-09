@@ -7,6 +7,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -26,11 +29,11 @@
     padding: 15px 0;
     background: #111;
 }
-.navbar .max-width{
+ .navbar .max-width{
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
-}
+} 
 .navbar .logo a{
     color: #fff;
     font-size: 35px;
@@ -48,6 +51,7 @@
     display: inline-block;
 }
 .navbar .menu li a{
+    display: block;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -68,6 +72,29 @@
     cursor: pointer;
     display: none;
 }
+ .scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color:#fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}  
 
 /* Home section style */
 .home{
@@ -90,14 +117,16 @@
     font-weight: 600;
     margin-left: -3px;
 }
+
 .home .home-content .text-3{
     font-size: 40px;
-    margin: 5px 0;
+    margin-left: -3px;
 }
 .home .home-content .text-3 span{
-  color: crimson;
-  font-weight: 500;
-}
+    font-size: 30px;
+    color: crimson;
+    font-weight: 500;
+  }
 
 .home .home-content a{
     color: #fff;
@@ -118,6 +147,7 @@
     box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;
 }
+
 #btn {
     font-family: 'Ubuntu', sans-serif;
     color: #fff;
@@ -143,11 +173,12 @@
 section{
     padding: 100px 0;
 }
-.about, .project, .contact{
+.about, .project, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
- .project .project-content{
+ .project .project-content,
+ .contact .contact-content{
      display: flex;
      flex-wrap: wrap;
      align-items: center;
@@ -182,7 +213,6 @@ section .title::after{
     background: #fff;
     transform: translateX(-50%)
 }
-
 /* about styling */
 
 .about .title::after{
@@ -210,20 +240,47 @@ section .title::after{
 }
 
 /* porject section style */
-.project{
+/* .container{
+   
+} */
+ .project{
     color: #fff;
-    background: #111;
+    background: lightblue;
 }
 .project .title::before{
     background: #fff;
 }
 .project .title::after{
-    background: #111;
+    background: lightblue;
     content: "what I did";
 }
-.project-image {
-    height: 100%; 
-    width: 100%;
+.project-card{
+    position: relative;
+    width: 200px;
+  }
+  .project-data{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1rem;
+  }
+  .project-title,
+  .project-description{
+    color: #fff;
+  }
+  .project-title{
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+  }
+  .project-description{
+    display: block;
+    font-size: .85rem;
+  }
+   .project-image:hover{
+    transform: scale(1.1);
+  }
+ .project-image {
+    height: auto; 
+    max-width: 100%;
     transition: all 0.3s ease;
     object-fit: cover;
 }
@@ -235,7 +292,7 @@ section .title::after{
     padding: 15px 15px; 
     margin-top: 2rem;
     transition: all 0.3s ease;
-}
+} 
 .code{
     color: #222;
     transition: color 0.3s ease-out;
@@ -247,10 +304,10 @@ p:hover .code{
  .project .project-content .card:hover{
     background: #222;
 } 
-.project .project-content .card .box{
+.project .project-content .card{
     transition: all 0.3s ease;
 }
-.project .project-content .card:hover .box{
+.project .project-content .card:hover{
     transform: scale(1.05);
 }
 .project .project-content .card .text{
@@ -258,61 +315,65 @@ p:hover .code{
     font-weight: 500;
     margin: 10px 0 7px 0;
     color: crimson;
-}
+} 
 
 /* social icon styling */
-
-.wrapper .button{
-    text-align: center;
-    justify-content: center;
+.wrapper{
     display: flex;
-    height: 60px;
-    width: 60px;
-    margin: 0 5px;
-    background: transparent;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0px 10px 10px rgb(0, 0, 0, 0.1);
-    transition: all 0.3s ease-out;
-    margin-top: 1rem;
-}
-
-.wrapper .button .icon{
     justify-content: center;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    box-sizing: border-box;
+    align-items: center;
+} 
+.button{
+    position: relative;
+    display: flex;
+}
+.button .icon{
+    position: relative;
+    list-style: none;
+}
+.wrapper .button .icon #social{
+    font-size: 40px;
     line-height: 60px;
-    transition: all 0.3s ease-out;
 }
-.wrapper .button:hover .icon i{
+.button .icon #social{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 50%;
+    background: #fff; 
+    color: #111;
+    box-shadow: inset -1px -1px 2px rgba(0,0,0,0.2),
+                2px 2px 5px rgba(0,0,0,0.2);
     transition: all 0.3s ease-out;
+ }
+.button .icon #social:hover{
+    transform: translateY(-10px);
     color: #fff;
-    
-}
-
-.wrapper .button:nth-child(1):hover .icon{
+    transition: all 0.3s ease-out;  
+}  
+.button .icon:nth-child(1):hover  #social{
     background: #BB001B
 }
-.wrapper .button:nth-child(2):hover .icon{
+.button .icon:nth-child(2):hover  #social{
     background: #00acee;
 }
-.wrapper .button:nth-child(3):hover .icon{
+.button .icon:nth-child(3):hover  #social{
     background: #4078c0;
 }
-.wrapper .button:nth-child(4):hover .icon{
+.button .icon:nth-child(4):hover  #social{
     background: #0077b5;
 }
-.wrapper .button:nth-child(5):hover .icon{
+.button .icon:nth-child(5):hover  #social{
     background: #25d366;
-}
-.wrapper .button .icon i{
-    font-size: 25px;
-    line-height: 60px;
 }
 
 /* contact section styling */
+
 .contact .title::after{
     content: "let's work together";
 }
@@ -320,6 +381,23 @@ p:hover .code{
     width: calc(50% - 30px); 
 }
 
+/* Footer styling */
+
+footer{
+    padding: 20px 23px;
+    background: #111;
+    color: #fff;
+    justify-items: center;
+    align-items: center;
+}
+footer span a{
+    color: #3399ff;
+    text-decoration: none;
+    justify-content: space-between;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
 
 /* responsive media query start */
 
