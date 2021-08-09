@@ -27,7 +27,7 @@ html{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: #111;
+    background: #3399ff;
 }
  .navbar .max-width{
     display: flex;
@@ -384,19 +384,24 @@ p:hover .code{
 /* Footer styling */
 
 footer{
-    padding: 20px 23px;
+    padding: 15px 23px;
     background: #111;
     color: #fff;
-    justify-items: center;
-    align-items: center;
+    text-align: center;
 }
 footer span a{
     color: #3399ff;
     text-decoration: none;
-    justify-content: space-between;
 }
 footer span a:hover{
     text-decoration: underline;
+}
+#footer-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    padding: 8px;
 }
 
 /* responsive media query start */
