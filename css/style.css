@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
 
 *{
     margin: 0;
@@ -10,11 +11,12 @@
 html{
     scroll-behavior: smooth;
 }
+
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
-}
+} 
 
 /* navbar styling */
 .navbar{
@@ -27,7 +29,7 @@ html{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: #3399ff;
+    background: #111;
 }
  .navbar .max-width{
     display: flex;
@@ -98,24 +100,23 @@ html{
 
 /* Home section style */
 .home{
-    display: flex;
+    display: grid;
     height: 100vh;
     color: #fff;
-    background: #3399ff;
-    min-height: 500px;
+    background: #111;
+    min-height: 400px;
     font-family: 'Ubuntu', sans-serif;
+    align-items: center;
 }
 .home .max-width{
    margin: auto 0 auto 40px;
 }
 .home .home-content .text-1{
-    font-size: 27px;
-    text-align: center;
+    font-size: 80px;
 }
 .home .home-content .text-2{
-    font-size: 75px;
+    font-size: 50px;
     font-weight: 600;
-    margin-left: -3px;
 }
 
 .home .home-content .text-3{
@@ -123,9 +124,10 @@ html{
     margin-left: -3px;
 }
 .home .home-content .text-3 span{
-    font-size: 30px;
+    font-size: 40px;
     color: crimson;
     font-weight: 500;
+    text-align: center;
   }
 
 .home .home-content a{
@@ -137,7 +139,7 @@ html{
     border-radius: 6px;
     margin-top: 20px;
     display: inline-block;
-    border: 2px solid #3399ff;
+    border: 2px solid #fff;
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
@@ -162,10 +164,10 @@ html{
     transition: all 0.3s ease;
 }
 #btn:hover{
-    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    text-shadow: 0px 5px 40px -10px rgba(62, 43, 231, 0.57);
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 0px 5px 40px -10px rgba(17, 17, 17, 0.57);
     transition: all 0.4s ease 0s;
 }
 
@@ -218,6 +220,9 @@ section .title::after{
 .about .title::after{
     content: "who i am";
 }
+.about{
+    border-bottom: 1px silver solid;
+}
 .about .about-content .left{
     width: 60%;
 }
@@ -238,20 +243,16 @@ section .title::after{
 .about .about-content .right .text span{
     color: crimson;
 }
-
-/* porject section style */
-/* .container{
-   
-} */
  .project{
-    color: #fff;
-    background: lightblue;
+    color: #111;
+    background: #fff;
+    border-bottom: 1px silver solid;
 }
 .project .title::before{
-    background: #fff;
+    background: #111;
 }
 .project .title::after{
-    background: lightblue;
+    background: #fff;
     content: "what I did";
 }
 .project-card{
@@ -266,6 +267,7 @@ section .title::after{
   .project-title,
   .project-description{
     color: #fff;
+    text-align: center;
   }
   .project-title{
     font-size: 1.6rem;
@@ -275,34 +277,30 @@ section .title::after{
     display: block;
     font-size: .85rem;
   }
-   .project-image:hover{
-    transform: scale(1.1);
-  }
  .project-image {
-    height: auto; 
+    max-height: 100%;
     max-width: 100%;
-    transition: all 0.3s ease;
-    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.4s ease 0s;
 }
 .project .project-content .card {
     width: calc(33% - 40px); 
-    background: #222;
+    background: #fff;
     border-radius: 5px;
     text-align: center;
     padding: 15px 15px; 
     margin-top: 2rem;
     transition: all 0.3s ease;
-} 
-.code{
-    color: #222;
+}   
+ .code{
+    color: #fff;
     transition: color 0.3s ease-out;
 }
-
-p:hover .code{
+ p:hover .code{
     color: #fff;
 }
  .project .project-content .card:hover{
-    background: #222;
+    background: silver;
 } 
 .project .project-content .card{
     transition: all 0.3s ease;
@@ -315,7 +313,7 @@ p:hover .code{
     font-weight: 500;
     margin: 10px 0 7px 0;
     color: crimson;
-} 
+}  
 
 /* social icon styling */
 .wrapper{
@@ -406,12 +404,6 @@ footer span a:hover{
 
 /* responsive media query start */
 
-@media (max-width: 1300px) {
-    .home .max-width{
-       margin-left: 0px;
-    }
-}
-
 @media (max-width: 1104px) {
     .about .about-content .left img{
         height: 300px;
@@ -466,7 +458,7 @@ footer span a:hover{
         padding: 10px 30px;
     }
     .max-width{
-        max-width: 800px;
+        max-width: 930px;
     }
     .about .about-content .column{
         width: 100%;
@@ -511,3 +503,4 @@ footer span a:hover{
         font-size: 27px;
     }
 }
+  

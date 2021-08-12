@@ -16,14 +16,15 @@ $(document).ready(function(){
         $('html').animate({scrollTop: 0});
         $('html').css("scrollBehavior", "auto");
     });
+    
     $('.navbar .menu li a').click(function(){
         $('html').css("scrollBehavior", "smooth");
     });
 
     // Menu toggle/navbar script
     $('.menu-btn').click(function(){
-        $('.navbar .menu footer').toggleClass("active");
-        $('.menu-btn i #footer-nav').toggleClass("active");
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
     });
 });
 
@@ -35,21 +36,6 @@ var typed = new Typed(".typing", {
     backSpeed: 60,
     loop: true
 });
-// swiper project
-
-var swiper = new Swiper(".swiper-container", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-  });
 
 //   day of the week
 let output = document.getElementById('currentday');
@@ -80,3 +66,25 @@ switch(day){
         break;
 }
 output.innerHTML = day;
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+ const sr = ScrollReveal({
+    distance: '60px',
+    duration: 2800,
+    reset: true,
+ });
+
+sr.reveal(` .home, .about, .project-content`,{
+    origin: 'top',
+    interval: 100,
+});
+sr.reveal(`.about-me`,{
+    origin: 'right',
+    interval: 100,
+});
+sr.reveal(`.icon`,{
+    origin: 'left',
+    interval: 100,
+});
+
+

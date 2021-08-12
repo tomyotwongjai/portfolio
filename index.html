@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/anime.css">
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -21,7 +20,7 @@
     </div>
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#">Kaizen<span>wb.</span></a></div>
+            <div class="logo"><a href="#">Tom<span> Yotwongjai</span></a></div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
@@ -38,8 +37,7 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                    <div class="text-1"><span class="wave">Hello</span>, my name is</div>
-                    <div class="text-2">Tom Yotwongjai</div>
+                    <div class="text-1"><span class="wave">Hello</span>
                     <div class="text-3">Have a <span class="typing"></span> <div id="currentday"></div></div>
                     <a href="#">Hire Me</a>
             </div>
@@ -54,7 +52,7 @@
                <div class="column left">
                 <img src="images/smiley.png" alt="images">
                </div>
-               <div class="column right">
+               <div class="column right about-me">
                    <div class="text">I'm Tom and I'm a <span>web-developer</span> </div>
                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem sapiente impedit quia expedita veritatis commodi qui magnam cupiditate cumque error.</p>
                    <a id="btn" href="#">Download CV</a>
@@ -64,11 +62,12 @@
     </section>
 
     <!-- project section -->
-     <section class="project" id="project">
+
+    <section class="project" id="project">
         <h2 class="title">My projects</h2>
-        <div class="max-width project-container swiper-continer"> 
-            <div class="project-content swiper-wrapper">
-                <div class="card swiper-slide">
+        <div class="max-width project-container"> 
+            <div class="project-content">
+                <div class="card">
                     <img class="project-image" src="images/project.jpg" alt="">
                         <p class="text">
                             <span class="code"><</span>
@@ -76,7 +75,7 @@
                             <span class="code">/></span>
                         </p>
                 </div>
-                <div class="card swiper-slide">
+                <div class="card">
                     <img class="project-image" src="images/project2.jpg" alt="">
                         <p class="text">
                             <span class="code"><</span>
@@ -84,16 +83,8 @@
                             <span class="code">/></span>
                         </p>
                 </div>
-                <div class="card swiper-slide">
-                    <img class="project-image" src="images/project.jpg" alt="">
-                        <p class="text">
-                            <span class="code"><</span>
-                            <a href="#" target="_blank" class="text">Porject1</a>
-                            <span class="code">/></span>
-                        </p>
-                </div>
-                <div class="card swiper-slide">
-                    <img class="project-image" src="images/project2.jpg" alt="">
+                <div class="card">
+                    <img class="project-image" src="images/smiley.png" alt="">
                         <p class="text">
                             <span class="code"><</span>
                             <a href="#" target="_blank" class="text">Porject1</a>
@@ -102,7 +93,7 @@
                 </div>
             </div>
         </div> 
-    </section>   
+    </section> 
 
     <!-- contact section -->
 
@@ -124,14 +115,10 @@
 
     <!-- Footer -->
     <footer>
-        <ul class="footer-menu">
-            <li id="footer-nav"><a href="#home">Home</a></li>
-            <li id="footer-nav"><a href="#about">About</a></li>
-            <li id="footer-nav"><a href="#project">Projects</a></li>
-        </ul>
-        <span><a href="#"> Kaizenwb</a> | <span class="far fa-copyright"></span>2020 All rights reserved.</span>
+        <span><a href="#"> Tom Yotwongjai</a> | <span class="far fa-copyright"></span>2020 All rights reserved.</span>
     </footer>
-    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- main js -->
 <script src="js/main.js"></script>
 </body>
 </html>
