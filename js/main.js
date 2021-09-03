@@ -28,15 +28,6 @@ $(document).ready(function(){
     });
 });
 
-// typing animation
-var typed = new Typed(".typing", {
-    strings: ["ambition", "blissful", "focus", "filfillment", "inspiration", "kindness",
-    "productive", "splendid", "wondeful", "zen"],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true
-});
-
 //   day of the week
 let output = document.getElementById('currentday');
 
@@ -67,24 +58,14 @@ switch(day){
 }
 output.innerHTML = day;
 
-/*==================== SCROLL REVEAL ANIMATION ====================*/
- const sr = ScrollReveal({
-    distance: '60px',
-    duration: 2800,
-    reset: true,
- });
+// typing animation
 
-sr.reveal(` .home, .about, .project-content`,{
-    origin: 'top',
-    interval: 100,
-});
-sr.reveal(`.about-me`,{
-    origin: 'right',
-    interval: 100,
-});
-sr.reveal(`.icon`,{
-    origin: 'left',
-    interval: 100,
+var typed = new Typed(".typing", {
+    strings: ["ambition day", "blissful day", "focus day", "filfillment day", "inspiration day", "kindness day",
+    "productive day", "splendid day", "wondeful day", "zen day"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
 });
 
 
