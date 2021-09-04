@@ -228,12 +228,78 @@ section .title::after{
     color: crimson;
 }
 
+.skill{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .skill::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 250px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+} 
+section .skill::after{
+    content: "What I know";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    padding: 5px;
+    font-size: 20px;
+    color: crimson;
+    background: #fff; 
+    transform: translateX(-50%)
+}
+.button .skls{
+    position: relative;
+    list-style: none;
+}
+.wrapper .button .skls{
+    font-size: 40px;
+    line-height: 60px;
+}
+.button .skls{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    text-decoration: none; 
+    color: crimson;
+    transition: all 0.3s ease-out;
+ }
+ #skill-1{
+     color: #e34c26;
+ }
+ #skill-2{
+     color: #264de4;
+ }
+ #skill-3{
+    color: #00acee;
+}
+#skill-4{
+    color: #42b883;
+}
+#skill-5{
+    color: #323330;
+}
+
 /* project-styling */
 
 
 .project{
     color: #fff;
-    background: #111;
+    background: #000;
     border-bottom: 1px silver solid;
 } 
 .project .title::before{
@@ -578,6 +644,11 @@ footer span a:hover{
         font-size: 30px;
     }
 } 
+@media (max-width: 516px){
+    .word{
+        font-size: 0em
+    }
+}
 
 @media (max-width: 400px) {
     body{
