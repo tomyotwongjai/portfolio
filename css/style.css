@@ -351,7 +351,7 @@ section .skill::after{
 .content{
     position: relative;
     width: 90%;
-    max-width: 400px;
+    max-width: 300px;
     margin: auto;
 } 
 .content:hover .project-detail{
