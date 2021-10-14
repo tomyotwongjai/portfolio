@@ -1,164 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/anime.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/anime.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <title>Personal Portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
+      <i class="fas fa-angle-up"></i>
     </div>
     <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#">Tom<span> Yotwongjai</span></a></div>
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#project" class="menu-btn">Projects</a></li>
-                <li><a href="#contact" class="menu-btn">Contacts</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
+      <div class="max-width">
+        <div class="logo">
+          <a href="#">Tom<span> Yotwongjai</span></a>
         </div>
-        <div id="progressbar"></div>
-        <div id="scrollPath"></div>
+        <ul class="menu">
+          <li><a href="#home" class="menu-btn">Home</a></li>
+          <li><a href="#about" class="menu-btn">About</a></li>
+          <li><a href="#project" class="menu-btn">Projects</a></li>
+          <li><a href="#contact" class="menu-btn">Contacts</a></li>
+        </ul>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div id="progressbar"></div>
+      <div id="scrollPath"></div>
     </nav>
 
     <!-- home section -->
- 
+
     <section class="home" id="home">
-        <div class="max-width">
-            <div class="container">
-                <div class="word">
-                    <span>H</span>
-                    <span>E</span>
-                    <span>L</span>
-                    <span>L</span>
-                    <span>O</span>
-                    <span>!</span>
-                </div>
-                <div class="text-1">I'm Tom</div>
-                <div class="text-2">Welcome</div>
-            </div>
+      <div class="max-width">
+        <div class="container">
+          <div class="word">
+            <span>H</span>
+            <span>E</span>
+            <span>L</span>
+            <span>L</span>
+            <span>O</span>
+            <span>!</span>
+          </div>
+          <div class="text-1">I'm Tom</div>
+          <div class="text-2">Welcome</div>
         </div>
+      </div>
     </section>
 
     <!-- about section -->
     <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title"><span class="wave">About</span> Me</h2>
-            <div class="about-content">
-               <div class="column left">
-                <img id="main-img" src="images/smiley.png" alt="images">
-               </div>
-               <div class="column right about-me">
-                   <div class="text">I'm Tom and I'm a self-taught <span>web-developer</span> </div>
-                   <p>From Hawaii. I've been dabbling off and on in programming since 2017. I think the timing wasn't right for me to become a 
-                       full-time programmer than but I'm confident the time is now. 
-                        I'm looking for place where I can show both my soft and hard skills and be part of a team that do something awesome! 
-                        Thank you for stopping by and please take a look at what I've done so far below.
-                         </p>
-                         <h3 class="skill"></h3>
-                         <div class="wrapper">
-                            <ul class="button">
-                                <li class="skls"><a id="skill-1" target="_blank" href="#"><i class="fab fa-html5" area-hidden="true"></i></a></li>
-                                <li class="skls"><a id="skill-2" target="_blank" href="#"><i class="fab fa-css3" area-hidden="true"></i></a></li>
-                                <li class="skls"><a id="skill-3" target="_blank" href="#"><i class="fab fa-git" area-hidden="true"></i></a></li>
-                                <li class="skls"><a id="skill-4" target="_blank" href="#"><i class="fab fa-vuejs" area-hidden="true"></i></a></li>
-                                <li class="skls"><a id="skill-5" target="_blank" href="#"><i class="fab fa-js" area-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                         <span class="text">Happy <div style="color: #ff0000;" id="currentday"></div></span>
-               </div>
+      <div class="max-width">
+        <h2 class="title"><span class="wave">About</span> Me</h2>
+        <div class="about-content">
+          <div class="column left">
+            <img id="main-img" src="images/headpoto.jpeg" alt="images" />
+          </div>
+          <div class="column right about-me">
+            <div class="text">
+              I'm Tom and I'm a self-taught <span>web-developer</span>
             </div>
+            <p>
+              From Hawaii. I've been dabbling off and on in programming since
+              2017. I think the timing wasn't right for me to become a full-time
+              programmer than but I'm confident the time is now. I'm looking for
+              place where I can show both my soft and hard skills and be part of
+              a team that do something awesome! Thank you for stopping by and
+              please take a look at what I've done so far below.
+            </p>
+            <h3 class="skill"></h3>
+            <div class="wrapper">
+              <ul class="button">
+                <li class="skls">
+                  <a id="skill-1" target="_blank" href="#"
+                    ><i class="fab fa-html5" area-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="skls">
+                  <a id="skill-2" target="_blank" href="#"
+                    ><i class="fab fa-css3" area-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="skls">
+                  <a id="skill-3" target="_blank" href="#"
+                    ><i class="fab fa-git" area-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="skls">
+                  <a id="skill-4" target="_blank" href="#"
+                    ><i class="fab fa-vuejs" area-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="skls">
+                  <a id="skill-5" target="_blank" href="#"
+                    ><i class="fab fa-js" area-hidden="true"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <span class="text"
+              >Happy
+              <div style="color: #ff0000" id="currentday"></div
+            ></span>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- project section -->
 
     <section class="project" id="project">
-        <h2 class="title project-title">My projects</h2>
-        <div class="max-width">
-            <div class="project-container">
-                <div class="content">
-                    <a href="#" target="_blank">
-                    <div class="content-overlay"></div>
-                    <img class="project-image" src="images/project1.png" alt="">
-                    <div class="project-detail fadeIn-bottom">
-                       <p class="content-text">One page Product landing-page using HTML/CSS & JS DOM </p>
-                    </div>
-                    </a>
-                </div>
+      <h2 class="title project-title">My projects</h2>
+      <div class="max-width">
+        <div class="project-container">
+          <div class="content">
+            <a href="#" target="_blank">
+              <div class="content-overlay"></div>
+              <img class="project-image" src="images/project1.png" alt="" />
+              <div class="project-detail fadeIn-bottom">
+                <p class="content-text">
+                  One page Product landing-page using HTML/CSS & JS DOM
+                </p>
+              </div>
+            </a>
+          </div>
 
-                <div class="content">
-                    <a href="#" target="_blank">
-                    <div class="content-overlay"></div>
-                    <img class="project-image" src="images/project2.png" alt="">
-                    <div class="project-detail fadeIn-bottom">
-                       <p class="content-text">Button hover using CSS</p>
-                    </div>
-                    </a>
-                </div>
+          <div class="content">
+            <a href="#" target="_blank">
+              <div class="content-overlay"></div>
+              <img class="project-image" src="images/project2.png" alt="" />
+              <div class="project-detail fadeIn-bottom">
+                <p class="content-text">Button hover using CSS</p>
+              </div>
+            </a>
+          </div>
 
-                <div class="content">
-                    <a href="#" target="_blank">
-                    <div class="content-overlay"></div>
-                    <h3 class="content-title">Coming soon!</h3>
-                    <img class="project-image" src="#" alt="">
-                    <div class="project-detail fadeIn-bottom">
-                       <p class="content-text">This is where my project will be.</p>
-                    </div>
-                    </a>
-                </div>
-            </div>
+          <div class="content">
+            <a href="#" target="_blank">
+              <div class="content-overlay"></div>
+              <h3 class="content-title">Coming soon!</h3>
+              <img class="project-image" src="#" alt="" />
+              <div class="project-detail fadeIn-bottom">
+                <p class="content-text">This is where my project will be.</p>
+              </div>
+            </a>
+          </div>
         </div>
-    </section>  
+      </div>
+    </section>
 
     <!-- contact section -->
 
     <section class="contact" id="contact">
-        <div class="max-width"> 
-            <h2 class="title">Contact me</h2>
-            <div class="wrapper">
-                <ul class="button">
-                    <li class="icon"><a id="social" target="_blank" href="mailto:munch2018@gmail.com"><i class="fas fa-envelope" area-hidden="true"></i></a></li>
-                    <li class="icon"><a id="social" target="_blank" href="https://twitter.com/kaizenwb"><i class="fab fa-twitter" area-hidden="true"></i></a></li>
-                    <li class="icon"><a id="social" target="_blank" href="https://github.com/tomyotwongjai"><i class="fab fa-github" area-hidden="true"></i></a></li>
-                    <li class="icon"><a id="social" target="_blank" href="#"><i class="fab fa-linkedin-in" area-hidden="true"></i></a></li>
-                    <li class="icon"><a id="social" target="_blank" href="#"><i class="fab fa-whatsapp" area-hidden="true"></i></a></li>
-                </ul>
+      <div class="max-width">
+        <h2 class="title">Contact me</h2>
+
+        <div class="column center">
+          <form action="POST" data-netlify="true">
+            <div class="fields">
+              <div class="field name">
+                <input type="text" name="name" placeholder="Name" required />
+              </div>
+              <div class="field email">
+                <input type="email" name="email" placeholder="Email" required />
+              </div>
             </div>
+            <div class="field">
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="field textarea">
+              <textarea
+                cols="30"
+                rows="10"
+                name="message"
+                placeholder="Message.."
+                required
+              ></textarea>
+              <div class="field">
+                <div data-netlify-recaptcha="true"></div>
+              </div>
+            </div>
+            <div class="button-area">
+              <button type="submit">Send message</button>
+            </div>
+          </form>
         </div>
+
+        <div class="wrapper">
+          <ul class="button">
+            <li class="icon">
+              <a id="social" target="_blank" href="mailto:munch2018@gmail.com"
+                ><i class="fas fa-envelope" area-hidden="true"></i
+              ></a>
+            </li>
+            <li class="icon">
+              <a id="social" target="_blank" href="https://twitter.com/kaizenwb"
+                ><i class="fab fa-twitter" area-hidden="true"></i
+              ></a>
+            </li>
+            <li class="icon">
+              <a
+                id="social"
+                target="_blank"
+                href="https://github.com/tomyotwongjai"
+                ><i class="fab fa-github" area-hidden="true"></i
+              ></a>
+            </li>
+            <li class="icon">
+              <a id="social" target="_blank" href="#"
+                ><i class="fab fa-linkedin-in" area-hidden="true"></i
+              ></a>
+            </li>
+            <li class="icon">
+              <a
+                id="social"
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=792690667&text=Hi!%20What%20can%20I%20do%20for%20you?"
+                ><i class="fab fa-whatsapp" area-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- cv button -->
     <div id="cv" class="container">
-        <a href="#">
-            <span>Download CV</span>
-        </a>
-    </div> 
+      <a href="#">
+        <span>Download CV</span>
+      </a>
+    </div>
 
     <!-- type script & current date -->
-     <div class="max-width">
-        <div class="text">Have a <span class="typing"></span> <div id="currentday"></div></div>
-    </div> 
+    <div class="max-width">
+      <div class="text">
+        Have a <span class="typing"></span>
+        <div id="currentday"></div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <span><a href="#"> Tom Yotwongjai</a> | <span class="far fa-copyright"></span>2020 All rights reserved.</span>
+      <span
+        ><a href="#"> Tom Yotwongjai</a> |
+        <span class="far fa-copyright"></span>2020 All rights reserved.</span
+      >
     </footer>
 
     <!-- main js -->
     <script src="js/main.js"></script>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
