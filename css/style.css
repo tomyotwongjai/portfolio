@@ -718,6 +718,17 @@ footer span a:hover {
   }
 }
 @media (max-width: 516px) {
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
   .word {
     font-size: 0em;
   }
@@ -736,6 +747,10 @@ footer span a:hover {
 @media (max-width: 400px) {
   body {
     background: #000 !important;
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 200vh;
   }
   .contact .title::after {
     font-size: 14px;
