@@ -11,14 +11,83 @@
 html {
   scroll-behavior: smooth;
 }
-section {
-  padding: 100px 0;
+
+/* Custom scroll-bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Reusable CSS */
+
+/*all content styling */
+section {
+  padding: 100px 0;
+  text-align: center;
+}
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
   margin: auto;
+}
+.about,
+.project,
+.contact,
+footer {
+  font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+.project .project-content,
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+section .title::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 250px;
+  height: 3px;
+  background: #000;
+  transform: translateX(-50%);
+}
+section .title::after {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  padding: 5px;
+  font-size: 20px;
+  color: crimson;
+  background: #fff;
+  transform: translateX(-50%);
 }
 
 /* navbar styling */
@@ -152,54 +221,6 @@ section {
   transition: all 0.4s ease 0s;
 }
 
-/*all content styling */
-section {
-  padding: 100px 0;
-  text-align: center;
-}
-.about,
-.project,
-.contact,
-footer {
-  font-family: 'Poppins', sans-serif;
-}
-.about .about-content,
-.project .project-content,
-.contact .contact-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-section .title {
-  position: relative;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  font-family: 'Ubuntu', sans-serif;
-}
-section .title::before {
-  content: '';
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 250px;
-  height: 3px;
-  background: #000;
-  transform: translateX(-50%);
-}
-section .title::after {
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  padding: 5px;
-  font-size: 20px;
-  color: crimson;
-  background: #fff;
-  transform: translateX(-50%);
-}
 /* about styling */
 
 .about .title::after {
@@ -227,70 +248,6 @@ section .title::after {
 }
 .about .about-content .right .text span {
   color: crimson;
-}
-
-.skill {
-  position: relative;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  font-family: 'Ubuntu', sans-serif;
-}
-section .skill::before {
-  content: '';
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 250px;
-  height: 3px;
-  background: #000;
-  transform: translateX(-50%);
-}
-section .skill::after {
-  content: 'What I know';
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  padding: 5px;
-  font-size: 20px;
-  color: crimson;
-  background: #fff;
-  transform: translateX(-50%);
-}
-.button .skls {
-  position: relative;
-  list-style: none;
-}
-.wrapper .button .skls {
-  font-size: 40px;
-  line-height: 60px;
-}
-.button .skls {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10px;
-  text-decoration: none;
-}
-#skill-1 {
-  color: #e34c26;
-}
-#skill-2 {
-  color: #264de4;
-}
-#skill-3 {
-  color: #00acee;
-}
-#skill-4 {
-  color: #42b883;
-}
-#skill-5 {
-  color: #323330;
 }
 
 /* project-styling */
@@ -619,7 +576,7 @@ footer span a:hover {
 
 /* responsive media query start */
 
-@media (max-width: 1024px) {
+@media (max-width: 1104px) {
   #main-img {
     width: 300px;
     height: 400px;
@@ -662,16 +619,6 @@ footer span a:hover {
     margin: 20px 0;
     font-size: 25px;
   }
-  .home .home-content .text-2 {
-    font-size: 70px;
-  }
-  .home .home-content .text-3 {
-    font-size: 35px;
-  }
-  .home .home-content a {
-    font-size: 23px;
-    padding: 10px 30px;
-  }
   .max-width {
     max-width: 930px;
   }
@@ -688,7 +635,7 @@ footer span a:hover {
   }
   .project .project-container .card {
     width: calc(50% - 10px);
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
   .column,
   .contact .contact-content .column {
@@ -701,13 +648,7 @@ footer span a:hover {
   .max-width {
     padding: 0 23px;
   }
-  .home .text-2 {
-    font-size: 30px;
-  }
-  .home a {
-    font-size: 20px;
-  }
-  .project .project-container .card {
+  .project .project-container .content {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -717,7 +658,7 @@ footer span a:hover {
     font-size: 30px;
   }
 }
-@media (max-width: 516px) {
+@media (max-width: 500px) {
   .navbar .menu {
     position: fixed;
     height: 100vh;
@@ -742,6 +683,14 @@ footer span a:hover {
   .right form .error-box {
     width: 150px;
   }
+  .scroll-up-btn {
+    right: 15px;
+    bottom: 15px;
+    height: 38px;
+    width: 35px;
+    font-size: 23px;
+    line-height: 38px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -752,6 +701,9 @@ footer span a:hover {
     position: fixed;
     height: 200vh;
   }
+  .contact {
+    margin-right: 1rem;
+  }
   .contact .title::after {
     font-size: 14px;
   }
@@ -761,8 +713,9 @@ footer span a:hover {
     width: 40px;
     height: 40px;
   }
-  .home .text-2 {
+  .home {
     font-size: 50px;
+    margin-left: 2rem;
   }
   .about {
     display: flex;
@@ -772,7 +725,9 @@ footer span a:hover {
     font-size: 19px;
     color: #fff;
     border-bottom: none;
+    margin-left: 3rem;
   }
+
   section .title::before {
     content: '';
     position: absolute;
@@ -801,11 +756,12 @@ footer span a:hover {
     align-items: center;
     font-size: 19px;
     color: #fff;
-    background: #000;
+    background: #f000;
+    margin-right: 3rem;
     border-bottom: none;
   }
   .project-title {
-    margin-left: 150px;
+    margin-left: 9rem;
   }
   .project .title::after {
     font-size: 15px;
@@ -820,7 +776,7 @@ footer span a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 150px;
+    margin-left: 6rem;
   }
   #cv {
     margin-left: 150px;
@@ -829,16 +785,17 @@ footer span a:hover {
     color: #fff;
     padding-bottom: 50px;
   }
-  footer {
+  .footer {
     display: flex;
-    margin-left: 150px;
+    justify-content: center;
+    text-align: center;
   }
-  .scroll-up-btn {
-    right: 15px;
-    bottom: 15px;
-    height: 38px;
-    width: 35px;
-    font-size: 23px;
-    line-height: 38px;
+}
+@media (max-width: 330px) {
+  .contact {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 9em;
   }
 }

@@ -1,7 +1,4 @@
 /* scroll animation */
-::-webkit-scrollbar {
-  width: 0;
-}
 #scrollPath {
   position: fixed;
   top: 0;
@@ -271,14 +268,14 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .word {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .word span {
-    font-size: 90px;
+    font-size: 80px;
     font-weight: 500;
     margin-bottom: 5px;
   }
