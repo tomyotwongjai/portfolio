@@ -28,6 +28,8 @@ $(document).ready(function () {
   });
 });
 
+document.addEventListener('touchstart', function () {}, true);
+
 //   day of the week
 let output = document.getElementById('currentday');
 
