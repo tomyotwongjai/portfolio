@@ -28,6 +28,8 @@ $(document).ready(function () {
   });
 });
 
+// Touch Event for mobile device
+
 document.addEventListener('touchstart', function () {}, true);
 
 //   day of the week
