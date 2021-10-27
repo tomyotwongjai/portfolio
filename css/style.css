@@ -134,12 +134,48 @@ section .title::after {
   font-weight: 500;
   margin-left: 25px;
   transition: color 0.3s ease;
+  border-radius: 10px;
 }
-.navbar .menu li a:hover {
-  color: crimson;
-}
+
 .navbar.sticky .menu li a:hover {
   color: #fff;
+}
+.navbar .nav-text {
+  font-size: 20px;
+}
+.navbar .nav-icon {
+  font-size: 30px;
+}
+.nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: ease 0.3s ease;
+  transform: scale(0);
+  text-transform: uppercase;
+}
+.navbar ul li:hover span {
+  transform: scale(1);
+  transition: ease-in 0.4s;
+}
+.navbar li:hover span {
+  color: rgb(4, 240, 220);
+}
+.navbar ul li:hover:nth-child(2) span {
+  color: rgb(4, 120, 197);
+}
+.navbar ul li:hover:nth-child(3) span {
+  color: rgb(247, 0, 255);
+}
+.navbar ul li:hover:nth-child(4) span {
+  color: blue;
 }
 
 /* menu btn styling */
